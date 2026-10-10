@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f3f3ed">
+  <meta name="description" content="Calculadoras y agenda en un solo lugar.">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <main>
+        <section class="dashboard" id="tools">
+          <header class="intro">
+            <p>Elige una opcion</p>
+          </header>
+          <section class="tool-switcher" aria-label="Herramientas">
+            <input class="tool-radio" type="radio" name="tool" id="tool-age" checked>
+            <input class="tool-radio" type="radio" name="tool" id="tool-temperature">
+            <input class="tool-radio" type="radio" name="tool" id="tool-agenda">
+            <nav class="tool-nav" aria-label="Seleccionar herramienta">
+              <label for="tool-age"></span> Edad</label>
+              <label for="tool-temperature"></span> Temperatura</label>
+              <label for="tool-agenda"></span> Agenda de tareas</label>
+            </nav>
+            <div class="tool-stage">
+              <section class="tool-panel age-panel" aria-labelledby="age-title">
+                <p class="panel-kicker">CALCULADORA</p>
+                <h2 id="age-title">Calculadora de edad</h2>
+                <p>Consulta tu edad </p>
+                <div class="field-grid">
+                  <label class="field">Fecha de nacimiento<input type="date" aria-label="Fecha de nacimiento"></label>
+                  <label class="field">Calcular hasta<input type="date" aria-label="Fecha de referencia"></label>
+                </div>
+                <div class="result-row"><span>Tu edad</span><output>— <small>años</small></output></div>
+              </section>
+              <section class="tool-panel temperature-panel" aria-labelledby="temperature-title">
+                <p class="panel-kicker">CALCULADORA</p>
+                <h2 id="temperature-title">Calculadora de temperatura</h2>
+                <p>Prepara una conversión entre escalas.</p>
+                <label class="field temperature-field">Temperatura<input type="number" inputmode="decimal" placeholder="0"></label>
+                <fieldset class="scale-picker"><legend>Escala de origen</legend>
+                  <label><input type="radio" name="scale" checked><span>°C</span></label>
+                  <label><input type="radio" name="scale"><span>°F</span></label>
+                  <label><input type="radio" name="scale"><span>K</span></label>
+                </fieldset>
+                <div class="result-row"><span>Conversión</span><output>— <small>°F</small></output></div>
+              </section>
+              <section class="tool-panel agenda-panel" aria-labelledby="agenda-title">
+                <p class="panel-kicker">PLANIFICACIÓN</p>
+                <h2 id="agenda-title">Agenda de tareas</h2>
+                <p>Marca las tareas que ya terminaste.</p>
+                <ul class="task-list">
+                  <li><label><input type="checkbox"><span class="task-check"></span><span>Revisar pendientes de la semana</span></label><time>09:00</time></li>
+                  <li><label><input type="checkbox"><span class="task-check"></span><span>Enviar el documento del proyecto</span></label><time>11:30</time></li>
+                  <li><label><input type="checkbox"><span class="task-check"></span><span>Hacer una pausa y salir a caminar</span></label><time>13:00</time></li>
+                  <li><label><input type="checkbox"><span class="task-check"></span><span>Preparar lo necesario para mañana</span></label><time>17:00</time></li>
+                </ul>
+              </section>
+            </div>
+          </section>
+        </section>
+  </main>
+</body>
+</html>
