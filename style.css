@@ -295,3 +295,71 @@ main {
     .intro h1 { font-size: 25px; }
     .tool-stage { padding: 14px; }
 }
+
+form button,
+.task-delete {
+    min-height: 36px;
+    padding: 6px 12px;
+    border: 1px solid #888;
+    background: #eee;
+    color: #222;
+    cursor: pointer;
+}
+
+form button:hover,
+.task-delete:hover {
+    background: #ddd;
+}
+
+.temperature-field input,
+.field select {
+    min-height: 38px;
+    padding: 6px;
+    border: 1px solid #aaa;
+    background: white;
+}
+
+#temperature-form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: end;
+    gap: 12px;
+}
+
+#temperature-form .field {
+    min-width: 150px;
+    margin-bottom: 0;
+}
+
+#task-form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: end;
+    gap: 12px;
+}
+
+#task-form .field {
+    min-width: 180px;
+    margin: 8px 0;
+}
+
+.task-list li {
+    align-items: center;
+}
+
+.task-delete {
+    margin-left: auto;
+}
+
+@media (max-width: 520px) {
+    #temperature-form,
+    #task-form {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    #temperature-form .field,
+    #task-form .field {
+        width: 100%;
+    }
+}
